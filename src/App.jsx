@@ -54,9 +54,10 @@ function App() {
           <div className="wrapper xl:mx-64 max-xl:mx-32 max-sm:mx-8 pt-4 ">
             <div className="content mt-18">
               <div className="font-code text-4xl font-bold text-zinc-300">Skills</div>
-              <div className="list mt-12 ">
-                <div className="list-wrapper grid grid-cols-3 gap-12">
-                  <div className="list-thing flex flex-col gap-8">
+              <div className="list mt-12">
+                
+                <div className="list-wrapper grid grid-cols-2 gap-12">
+                  <div className="list-thing flex flex-col gap-8 p-8 hover:bg-zinc-800 transition-all duration-300 rounded-2xl">
                     <div className="font-inter font-bold text-2xl">Web Development</div>
                     <div className="text-zinc-400 leading-6">React developer who loves building sleek, fast, and responsive UIs with <span className='text-zinc-100 font-bold'>React</span> and <span className='text-zinc-100 font-bold'>Tailwind</span>. Big on clean code, reusable components, and smooth user experiences. Always experimenting with new tech, optimizing performance, and making the web a better place—one component at a time.</div>
                     <div className="flex gap-6 flex-wrap">
@@ -65,25 +66,21 @@ function App() {
                       <RiJavascriptFill size={50} fill='#f9dc43'/>
                     </div>
                   </div>
-                  <div className="list-thing flex flex-col gap-8">
+                  <div className="list-thing flex flex-col gap-8 p-8 hover:bg-zinc-800 transition-all duration-300 rounded-2xl">
                     <div className="font-inter font-bold text-2xl">Machine Learning</div>
                     <div className="text-zinc-400 leading-6">Building smart models with <span className='text-zinc-100 font-bold'>TensorFlow, Keras, and Scikit-learn</span> for classification, prediction, and automation. Skilled in CNN, XGBoost, and Decision Trees, with experience in optimizing models through hyperparameter tuning and transfer learning. Passionate about computer vision using OpenCV for tasks like pose detection and image processing.</div>
                     <div className="flex gap-6 flex-wrap">
                       <FaPython size={50} fill='#4b8bbe'/>
                       <SiTensorflow size={50} fill='#ff9200'/>
                       <SiKeras size={50} fill='#c90000'/>
-                      
-
-
                     </div>
                   </div>
-                  <div className="list-thing flex flex-col gap-8">
+                  <div className="list-thing flex flex-col gap-8 p-8 hover:bg-zinc-800 transition-all duration-300 rounded-2xl">
                     <div className="font-inter font-bold text-2xl">Data Science</div>
                     <div className="text-zinc-400 leading-6">Transforming raw data into meaningful insights using <span className='text-zinc-100 font-bold'>Pandas, NumPy, and SciPy</span>. Experienced in data wrangling, preprocessing, and feature engineering to enhance model accuracy. Skilled in data visualization with Matplotlib, Seaborn, and Plotly to communicate findings effectively.</div>
                     <div className="flex gap-6 flex-wrap">
                       <SiPandas size={50} fill='#212a82'/>
                       <SiNumpy size={50} fill='#4ba6c9'/>
-
                     </div>
                   </div>
 
