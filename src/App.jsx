@@ -56,7 +56,7 @@ function App() {
               <div className="font-code text-4xl font-bold text-zinc-300">Skills</div>
               <div className="list mt-12">
                 
-                <div className="list-wrapper grid grid-cols-2 gap-12">
+                <div className="list-wrapper grid grid-cols-2 max-md:grid-cols-1 gap-12">
                   <div className="list-thing flex flex-col gap-8 p-8 hover:bg-zinc-800 transition-all duration-300 rounded-2xl">
                     <div className="font-inter font-bold text-2xl">Web Development</div>
                     <div className="text-zinc-400 leading-6">React developer who loves building sleek, fast, and responsive UIs with <span className='text-zinc-100 font-bold'>React</span> and <span className='text-zinc-100 font-bold'>Tailwind</span>. Big on clean code, reusable components, and smooth user experiences. Always experimenting with new tech, optimizing performance, and making the web a better place—one component at a time.</div>
