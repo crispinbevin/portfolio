@@ -2,11 +2,13 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import HoverLink from './components/HoverLink';
 import resume from './assets/newResume.pdf'
-import { FaExternalLinkAlt } from "react-icons/fa";
-import { FaReact, FaCss3Alt, FaHtml5, FaPython } from "react-icons/fa";
+import { FaExternalLinkAlt, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaReact, FaCss3Alt, FaHtml5, FaPython, FaGithub } from "react-icons/fa";
 import { RiTailwindCssFill, RiJavascriptFill } from "react-icons/ri";
 import { SiTensorflow, SiKeras, SiPandas, SiNumpy } from "react-icons/si";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
+import { FaX } from 'react-icons/fa6';
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,6 +36,7 @@ function App() {
             <div className=""><a className='flex gap-3 bg-white text-black font-bold rounded-2xl px-6 py-3 hover:transform hover:translate-y-[-2px] hover:translate-x-[2px]  hover:shadow-lg hover:shadow-accent hover:cursor-pointer transition-all duration-300' href={resume} target="_blank" rel="noopener noreferrer">Resume <FaExternalLinkAlt /></a></div>
           </div>
         </div>
+
         <div className="main-wrapper xl:mx-64 max-xl:mx-32 max-sm:mx-8 pt-32 flex flex-col justify-between lg:min-h-[100vh]">
           <div className="content flex flex-col gap-10">
             <div className="font-code font-bold text-2xl ml-1 text-zinc-300">
@@ -89,6 +92,34 @@ function App() {
             </div>
           </div>
         </div>
+
+        </div>
+
+
+        
+        <div className="footer section">
+          <div className="wrapper h-16 text-white flex justify-center items-center shadow-sm">
+            <div className="icons flex gap-2">
+              <a href="https://github.com/crispinbevin" className="font-bold rounded-2xl p-2 hover:transform hover:translate-y-[-1px] hover:translate-x-[1px] hover:shadow-sm hover:shadow-white hover:cursor-pointer transition-all duration-300">
+                <FaGithub
+                size={30}
+                />
+              </a>
+              <a href="https://www.linkedin.com/in/crispin-bevin-5353b6309/" className="font-bold rounded-2xl p-2 hover:transform hover:translate-y-[-1px] hover:translate-x-[1px] hover:shadow-sm hover:shadow-white hover:cursor-pointer transition-all duration-300">
+                <FaLinkedin
+                size={30}
+                />
+              </a>
+              <a href="https://x.com/crispyasff" className="font-bold rounded-2xl p-2 hover:transform hover:translate-y-[-1px] hover:translate-x-[1px] hover:shadow-sm hover:shadow-white hover:cursor-pointer transition-all duration-300">
+                <FaSquareXTwitter
+                size={30}
+                />
+              </a>
+
+            </div>
+            
+
+          </div>
       </div>
     </>
   );
