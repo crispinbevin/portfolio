@@ -29,7 +29,7 @@ function App() {
   
   return (
     <>
-      <div className="section bg-zinc-900 min-h-screen text-white font-inter">
+      <div className="section bg-zinc-900 min-h-screen text-white font-inter ">
         <div className={`navbar max-sm:p-3 p-5 flex justify-end items-center ${isScrolled ? 'scrolled' : ''}`}>
           <div className="elements flex gap-8 items-center">
             <div className="hover:cursor-pointer" onClick={scrollToSkills}><HoverLink text='Skills'/></div>
@@ -92,13 +92,11 @@ function App() {
             </div>
           </div>
         </div>
+      </div>
+      
 
-        </div>
-
-
-        
-        <div className="footer section">
-          <div className="wrapper h-16 text-white flex justify-center items-center shadow-sm">
+      <div className="footer section">
+          <div className="wrapper h-24 text-white flex justify-center items-center shadow-sm">
             <div className="icons flex gap-2">
               <a href="https://github.com/crispinbevin" className="font-bold rounded-2xl p-2 hover:transform hover:translate-y-[-1px] hover:translate-x-[1px] hover:shadow-sm hover:shadow-white hover:cursor-pointer transition-all duration-300">
                 <FaGithub
@@ -107,11 +105,6 @@ function App() {
               </a>
               <a href="https://www.linkedin.com/in/crispin-bevin-5353b6309/" className="font-bold rounded-2xl p-2 hover:transform hover:translate-y-[-1px] hover:translate-x-[1px] hover:shadow-sm hover:shadow-white hover:cursor-pointer transition-all duration-300">
                 <FaLinkedin
-                size={30}
-                />
-              </a>
-              <a href="https://x.com/crispyasff" className="font-bold rounded-2xl p-2 hover:transform hover:translate-y-[-1px] hover:translate-x-[1px] hover:shadow-sm hover:shadow-white hover:cursor-pointer transition-all duration-300">
-                <FaSquareXTwitter
                 size={30}
                 />
               </a>
