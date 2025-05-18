@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import HoverLink from './components/HoverLink';
-import resume from './assets/newResume.pdf'
+import resume from './assets/crispinResume.pdf'
 import { FaExternalLinkAlt, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaReact, FaCss3Alt, FaHtml5, FaPython, FaGithub } from "react-icons/fa";
