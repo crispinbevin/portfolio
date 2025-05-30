@@ -47,7 +47,7 @@ function App() {
               <div className="text-zinc-600 text-3xl">Final Year Computer Science Student</div>
             </div>
             <div className="text-zinc-400 mr-90 max-lg:mr-32 max-sm:mr-8 leading-9">
-              Full-stack developer and AI/ML enthusiast, crafting sleek apps with React, Python, and machine learning. Currently sharpening my skills at <a className='text-zinc-50 hover:text-secondary duration-150' href="https://ferns-it.in/" target="_blank" rel="noopener noreferrer">FERNS IT</a>. When I'm not coding, I'm either moving heavy circles around, bumping my head to vibrating air or pointing and clicking at moving pixels very quickly.
+              Full-stack developer and AI/ML enthusiast, crafting sleek apps with React, Python, and machine learning. Currently at home leveling up my stack and sharpening my edge — open to joining a team/organization where I can build cool things that matter. When I'm not coding, I'm either moving heavy circles around, bumping my head to vibrating air, or pointing and clicking at moving pixels very quickly.
             </div>
           </div>
           <div className="pointer bg-amber-50 w-[30px] rounded-full mb-8 self-center flex px-2" onClick={scrollToSkills}><MdKeyboardDoubleArrowDown size='30px' color='black'/></div>
