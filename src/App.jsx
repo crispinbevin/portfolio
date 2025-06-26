@@ -29,7 +29,7 @@ function App() {
   
   return (
     <>
-      <div className="section bg-zinc-900 min-h-screen text-white font-inter ">
+      <div className="section bg-zinc-900 min-h-screen text-white font-inter "> 
         <div className={`navbar max-sm:p-3 p-5 flex justify-end items-center ${isScrolled ? 'scrolled' : ''}`}>
           <div className="elements flex gap-8 items-center">
             <div className="hover:cursor-pointer" onClick={scrollToSkills}><HoverLink text='Skills'/></div>
@@ -96,8 +96,9 @@ function App() {
       
 
       <div className="footer section">
-          <div className="wrapper h-24 text-white flex justify-center items-center shadow-sm">
+          <div className="wrapper h-24 p-12 text-white flex justify-center items-center shadow-sm">
             <div className="icons flex gap-2">
+              <p className='text-gray-200 relative top-2'>Keep up with my activities here</p>
               <a href="https://github.com/crispinbevin" className="font-bold rounded-2xl p-2 hover:transform hover:translate-y-[-1px] hover:translate-x-[1px] hover:shadow-sm hover:shadow-white hover:cursor-pointer transition-all duration-300">
                 <FaGithub
                 size={30}
