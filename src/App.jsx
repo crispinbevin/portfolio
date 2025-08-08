@@ -9,6 +9,9 @@ import { RiTailwindCssFill, RiJavascriptFill } from "react-icons/ri";
 import { SiTensorflow, SiKeras, SiPandas, SiNumpy } from "react-icons/si";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { FaX } from 'react-icons/fa6';
+import portfolioThumb from './assets/portfolioThumbnail.png'
+import { FaCode, FaExternalLinkSquareAlt } from 'react-icons/fa';
+
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,6 +29,22 @@ function App() {
   const scrollToSkills = () => {
     document.getElementById('skills').scrollIntoView({ behavior: 'smooth' });
   };
+  const scrollToProjects = () => {
+    document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const projects = [
+  {
+    id: 1,
+    title: "Project 1",
+    description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur illum vel sequi tenetur illo saepe veniam mollitia, accusamus itaque impedit.",
+    image: portfolioThumb,
+    alt: "Portfolio thumbnail",
+    codeLink:"",
+    appLink:""
+  },
+  // Add more projects here
+];
   
   return (
     <>
@@ -33,9 +52,12 @@ function App() {
         <div className={`navbar max-sm:p-3 p-5 flex justify-end items-center ${isScrolled ? 'scrolled' : ''}`}>
           <div className="elements flex gap-8 items-center">
             <div className="hover:cursor-pointer" onClick={scrollToSkills}><HoverLink text='Skills'/></div>
+            <div className="hover:cursor-pointer" onClick={scrollToProjects}><HoverLink text='Projects'/></div>
             <div className=""><a className='flex gap-3 bg-white text-black font-bold rounded-2xl px-6 py-3 hover:transform hover:translate-y-[-2px] hover:translate-x-[2px]  hover:shadow-lg hover:shadow-accent hover:cursor-pointer transition-all duration-300' href={resume} target="_blank" rel="noopener noreferrer">Resume <FaExternalLinkAlt /></a></div>
           </div>
         </div>
+
+
 
         <div className="main-wrapper xl:mx-64 max-xl:mx-32 max-sm:mx-8 pt-32 flex flex-col justify-between lg:min-h-[100vh]">
           <div className="content flex flex-col gap-10">
@@ -50,8 +72,15 @@ function App() {
               Full-stack developer and AI/ML enthusiast, crafting sleek apps with React, Python, and machine learning. Currently at home leveling up my stack and sharpening my edge — open to joining a team/organization where I can build cool things that matter. When I'm not coding, I'm either moving heavy circles around, bumping my head to vibrating air, or pointing and clicking at moving pixels very quickly.
             </div>
           </div>
-          <div className="pointer bg-amber-50 w-[30px] rounded-full mb-8 self-center flex px-2" onClick={scrollToSkills}><MdKeyboardDoubleArrowDown size='30px' color='black'/></div>
+          {!isScrolled && (
+            <div className="pointer bg-amber-50 w-[30px] rounded-full mb-8 self-center flex px-2 transition-opacity duration-300 ${isScrolled ? 'opacity-0' : 'opacity-100'}`" onClick={scrollToSkills}>
+              <MdKeyboardDoubleArrowDown size='30px' color='black'/>
+            </div>
+          )}
+
         </div>
+
+
 
         <div id="skills" className="section skills text-white">
           <div className="wrapper xl:mx-32 max-sm:mx-4 pt-4 ">
@@ -92,8 +121,49 @@ function App() {
             </div>
           </div>
         </div>
+
+
+        <div id="projects" className="projects-section">
+          <div className="wrapper xl:mx-32 max-sm:mx-4 pt-4 ">
+            <div className="container mt-18">
+              <h1 className='font-code text-4xl font-bold text-zinc-300'>Projects</h1>
+              <div className="content">
+
+                <ul className='p-8 pt-16'>
+                  {projects.map(project => (
+                    <li key={project.id} className='flex bg-zinc-800 rounded-lg p-8'>
+                      <img 
+                        className='w-40 h-40 object-cover rounded-lg border-white border-2' 
+                        src={project.image} 
+                        alt={project.alt} 
+                      />
+                      <div className="px-8 flex flex-col gap-6">
+                        <div className="flex items-center justify-between gap-8">
+                          <h1 className="font-inter font-bold text-3xl self-end">{project.title}</h1>
+                          <div className="flex gap-4">
+                            <a href={project.appLink} className='bg-zinc-850 p-3 rounded-lg bg-zinc-900'><FaCode size={20}/></a>
+                            <a href={project.codeLink} className='bg-zinc-850 p-3 rounded-lg bg-zinc-900'><FaExternalLinkSquareAlt size={20}/></a>
+                          </div>
+                        </div>
+                        <p className='text-zinc-400 leading-6'>{project.description}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
       </div>
-      
+
+
+
+
+
+
+
+
 
       <div className="footer section">
           <div className="wrapper h-24 p-12 text-white flex justify-center items-center shadow-sm">
