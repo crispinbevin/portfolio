@@ -36,6 +36,15 @@ function App() {
   const projects = [
   {
     id: 1,
+    title: "Portfolio",
+    description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur illum vel sequi tenetur illo saepe veniam mollitia, accusamus itaque impedit.",
+    image: portfolioThumb,
+    alt: "Portfolio thumbnail",
+    codeLink:"https://github.com/crispinbevin/portfolio",
+    appLink:"httpss://crispinbevin.vercel.app"
+  },
+  {
+    id: 1,
     title: "Project 1",
     description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur illum vel sequi tenetur illo saepe veniam mollitia, accusamus itaque impedit.",
     image: portfolioThumb,
@@ -65,11 +74,11 @@ function App() {
               Hi, my name is
             </div>
             <div className="font-inter text-8xl max-md:text-6xl flex flex-col gap-6 font-extrabold">
-              <div className="div">Crispin Jithin Bevin</div>
-              <div className="text-zinc-600 text-3xl">Final Year Computer Science Student</div>
+              <div className="div">Crispin Bevin</div>
+              <div className="text-zinc-600 text-3xl">Engineering Graduate Fresher</div>
             </div>
             <div className="text-zinc-400 mr-90 max-lg:mr-32 max-sm:mr-8 leading-9">
-              Full-stack developer and AI/ML enthusiast, crafting sleek apps with React, Python, and machine learning. Currently at home leveling up my stack and sharpening my edge — open to joining a team/organization where I can build cool things that matter. When I'm not coding, I'm either moving heavy circles around, bumping my head to vibrating air, or pointing and clicking at moving pixels very quickly.
+              Full-stack developer and Front End enthusiast, crafting sleek apps with React. Currently at home leveling up my stack and sharpening my edge — open to joining a team/organization where I can build cool things that matter. When I'm not coding, I'm either moving heavy circles around, bumping my head to vibrating air, or pointing and clicking at moving pixels very quickly.
             </div>
           </div>
           {!isScrolled && (
@@ -126,23 +135,31 @@ function App() {
         <div id="projects" className="projects-section">
           <div className="wrapper xl:mx-32 max-sm:mx-4 pt-4 ">
             <div className="container mt-18">
-              <h1 className='font-code text-4xl font-bold text-zinc-300'>Projects</h1>
+              <h1 className='font-code text-4xl font-bold text-zinc-300 max-md:mx-4'>Projects</h1>
               <div className="content">
 
                 <ul className='p-8 pt-16'>
                   {projects.map(project => (
-                    <li key={project.id} className='flex bg-zinc-800 rounded-lg p-8'>
+                    <li key={project.id} className='flex bg-zinc-800 rounded-lg p-8 max-md:flex-col max-md:gap-8 mb-8'>
                       <img 
-                        className='w-40 h-40 object-cover rounded-lg border-white border-2' 
+                        className='w-40 h-40 object-cover rounded-lg border-white border-2 max-md:w-full' 
                         src={project.image} 
                         alt={project.alt} 
                       />
-                      <div className="px-8 flex flex-col gap-6">
-                        <div className="flex items-center justify-between gap-8">
-                          <h1 className="font-inter font-bold text-3xl self-end">{project.title}</h1>
-                          <div className="flex gap-4">
-                            <a href={project.appLink} className='bg-zinc-850 p-3 rounded-lg bg-zinc-900'><FaCode size={20}/></a>
-                            <a href={project.codeLink} className='bg-zinc-850 p-3 rounded-lg bg-zinc-900'><FaExternalLinkSquareAlt size={20}/></a>
+                      <div className="px-8 flex flex-col gap-6 max-sm:p-1">
+                        <div className="flex items-center justify-between gap-8 max-sm:gap-4 ">
+                          <h1 className="font-inter font-bold text-3xl self-end max-sm:self-start">{project.title}</h1>
+                          <div className="flex gap-4 max-sm:gap-2">
+                            {project.appLink && (
+                              <a href={project.codeLink} className='p-3 rounded-lg bg-zinc-200 text-black   hover:text-zinc-500 transition-colors duration-200'>
+                                <FaCode size={20}/>
+                              </a>
+                            )}
+                            {project.codeLink && (
+                              <a href={project.appLink} className='p-3 rounded-lg bg-zinc-200 text-black  hover:text-zinc-500 transition-colors duration-200'>
+                                <FaExternalLinkSquareAlt size={20}/>
+                              </a>
+                            )}
                           </div>
                         </div>
                         <p className='text-zinc-400 leading-6'>{project.description}</p>
