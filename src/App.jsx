@@ -151,13 +151,14 @@ function App() {
                           <h1 className="font-inter font-bold text-3xl self-end max-sm:self-start">{project.title}</h1>
                           <div className="flex gap-4 max-sm:gap-2">
                             {project.appLink && (
-                              <a href={project.codeLink} className='p-3 rounded-lg bg-zinc-200 text-black   hover:text-zinc-500 transition-colors duration-200'>
-                                <FaCode size={20}/>
+                              <a href={project.codeLink} className='p-3 rounded-lg text-white   hover:text-zinc-500 transition-colors duration-200'>
+                                
+                                <FaCode size={25}/>
                               </a>
                             )}
                             {project.codeLink && (
-                              <a href={project.appLink} className='p-3 rounded-lg bg-zinc-200 text-black  hover:text-zinc-500 transition-colors duration-200'>
-                                <FaExternalLinkSquareAlt size={20}/>
+                              <a href={project.appLink} className='p-3 rounded-lg text-white  hover:text-zinc-500 transition-colors duration-200'>
+                                <FaExternalLinkSquareAlt size={25}/>
                               </a>
                             )}
                           </div>
