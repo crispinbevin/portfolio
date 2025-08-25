@@ -2,16 +2,19 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import HoverLink from './components/HoverLink';
 import resume from './assets/crispinResume.pdf'
-import { FaExternalLinkAlt, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { FaReact, FaCss3Alt, FaHtml5, FaPython, FaGithub } from "react-icons/fa";
+import { FaExternalLinkAlt, FaLinkedin} from "react-icons/fa";
+import { FaReact, FaPython, FaGithub } from "react-icons/fa";
 import { RiTailwindCssFill, RiJavascriptFill } from "react-icons/ri";
 import { SiTensorflow, SiKeras, SiPandas, SiNumpy } from "react-icons/si";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
-import { FaX } from 'react-icons/fa6';
 import portfolioThumb from './assets/portfolioThumbnail.png'
 import { FaCode, FaExternalLinkSquareAlt } from 'react-icons/fa';
 
+import codeIcon from './assets/code.svg'
+
+import reactIcon from './assets/react.svg'
+import supabaseIcon from './assets/supabase.svg'
+import tailwindIcon from './assets/tailwind.svg'
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,20 +40,12 @@ function App() {
   {
     id: 1,
     title: "Portfolio",
-    description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur illum vel sequi tenetur illo saepe veniam mollitia, accusamus itaque impedit.",
-    image: portfolioThumb,
+    description: "Source code of the website you're looking at right now. Made using React and Tailwind CSS. Deployed using Vercel. ",
+    image: codeIcon,
     alt: "Portfolio thumbnail",
     codeLink:"https://github.com/crispinbevin/portfolio",
-    appLink:"httpss://crispinbevin.vercel.app"
-  },
-  {
-    id: 1,
-    title: "Project 1",
-    description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur illum vel sequi tenetur illo saepe veniam mollitia, accusamus itaque impedit.",
-    image: portfolioThumb,
-    alt: "Portfolio thumbnail",
-    codeLink:"",
-    appLink:""
+    appLink:"httpss://crispinbevin.vercel.app",
+    icons:[reactIcon, tailwindIcon, supabaseIcon]
   },
   // Add more projects here
 ];
@@ -142,7 +137,7 @@ function App() {
                   {projects.map(project => (
                     <li key={project.id} className='flex bg-zinc-800 rounded-lg p-8 max-md:flex-col max-md:gap-8 mb-8'>
                       <img 
-                        className='w-40 h-40 object-cover rounded-lg border-white border-2 max-md:w-full' 
+                        className='w-40 h-40 object-cover rounded-lg max-md:w-full' 
                         src={project.image} 
                         alt={project.alt} 
                       />
@@ -163,7 +158,17 @@ function App() {
                             )}
                           </div>
                         </div>
-                        <p className='text-zinc-400 leading-6'>{project.description}</p>
+                          <p className='text-zinc-400 leading-6'>{project.description}</p>
+                        <div className="tech-icons flex gap-4">
+                          {project.icons.map((iconSrc, index) => (
+                            <img
+                              key={index}
+                              src={iconSrc}
+                              alt={`Technology ${index + 1}`}
+                              className="tech-icon w-8 h-8"
+                            />
+                          ))}
+                        </div>
                       </div>
                     </li>
                   ))}
