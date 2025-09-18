@@ -13,7 +13,7 @@
     "@codaworks/react-glow": "^1.0.6",
     "@headlessui/react": "^2.2.3",
     "@tailwindcss/vite": "^4.0.12",
-    "axios": "^1.8.2",
+    "axios": "^1.12.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
