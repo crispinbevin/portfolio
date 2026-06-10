@@ -37,3 +37,4 @@ git clone https://github.com/crispinbevin/portfolio.git
 cd portfolio
 npm install
 npm run dev
+```
