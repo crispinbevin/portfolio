@@ -24,7 +24,7 @@ export default function CareerSummary() {
     },
   ];
   return (
-    <div className="flex ">
+    <div className="flex max-sm:flex-col">
       {careerTimeline.map((item, index) => {
         const isLast = index === careerTimeline.length - 1;
         return (
@@ -36,13 +36,13 @@ export default function CareerSummary() {
               {item.date}
             </p>
             <div className="w-1 h-1 rounded-full bg-white" />
-            <p className="absolute mt-8 text-sm font-bold text-zinc-300">
+            <p className="absolute mt-8 text-sm font-bold text-zinc-300 ">
               {item.company}
             </p>
             <p className="absolute mt-17 text-[10px] text-zinc-400 italic">
               {item.title}
             </p>
-            <hr className={`w-full ${isLast ? "border-dashed" : "mr-1.5"}`} />
+            <hr className={`w-full ${isLast ? "border-dashed" : "mr-1"}`} />
             {isLast && (
               <>
                 <div className="w-1 h-1 rounded-full bg-white" />{" "}

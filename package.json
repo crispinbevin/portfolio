@@ -11,9 +11,11 @@
     "format": "prettier . --write"
   },
   "dependencies": {
+    "@base-ui/react": "^1.5.0",
     "@codaworks/react-glow": "^1.0.6",
     "@headlessui/react": "^2.2.3",
     "@tailwindcss/vite": "^4.0.12",
+    "@tanstack/react-query": "^5.101.0",
     "axios": "^1.8.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

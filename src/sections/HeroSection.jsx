@@ -1,4 +1,4 @@
-import CareerSummary from "../widgets/CareerSummary";
+import CareerSummary from "@/widgets/CareerSummary";
 export default function HeroSection() {
   return (
     <div className="xl:mx-32 max-xl:mx-32 max-sm:mx-8 pt-32 flex flex-col lg:min-h-screen">
