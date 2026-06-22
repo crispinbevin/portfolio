@@ -1,7 +1,3 @@
 export default function StatCard() {
-  return (
-    <div>
-      
-    </div>
-  );
+  return <div>hihello</div>;
 }
